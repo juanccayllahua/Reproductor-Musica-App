@@ -1,0 +1,20 @@
+.header-usr{
+    display: flex;
+    margin: 0 0 0 17rem;
+    justify-content: end;
+
+}
+.btn-login{
+    color: #FFF;
+    margin: 12px;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center; 
+    background-color: var(--color-3);
+    border-color: var(--color-3);
+    border-radius: 5px;
+    align-items: center;
+    font-family: inherit;
+
+}

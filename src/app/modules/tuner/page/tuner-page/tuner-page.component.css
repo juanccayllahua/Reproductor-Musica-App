@@ -1,0 +1,37 @@
+.title-tuner{
+    
+    color: #FFF;
+    font-weight: 600;
+    margin: 0 0 0 17rem; 
+    padding: 0 10px;
+}
+.list-music{
+  
+    color: #FFF;
+    font-weight: 600;  
+    display: flex;
+    margin: 0 0 0 17rem; 
+    
+    
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3px;
+    
+}
+
+.item-artist{
+    border-radius: 5px; 
+    width: 320px;
+    height: 105px; 
+    padding: 0 0 0 0; 
+}
+ 
+button{
+    border: 0;
+    border-radius: 8px;
+}

@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --color-1:#323232;
+    --color-2:#DCDCDC;
+    --color-3:#fa586a;
+    --font-1: 'Roboto Flex', sans-serif;
+    --font-size: 15px;
+    
+     
+}
+
+body{
+    margin: 0 0 0 0;
+    background: var(--color-1);
+    color: var(--color-3);
+    font-family: var(--font-1);
+    font-weight: 400;
+    line-height: 1.46667;
+    letter-spacing: 0;
+}
+ 
