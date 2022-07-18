@@ -1,0 +1,47 @@
+<div class="title-canciones">Canciones</div>
+<div class="table-container noselect">
+    <div class="table-canciones">
+        <div class="canciones-list-header">
+            <div class="col-header-table col-altura color-detalle-otros">
+                <div class="header-val">Cancion</div>
+            </div>
+            <div class="column-header col-header-table col-altura color-detalle-otros">
+                <div class="header-val">Artista</div>
+            </div>
+            <div class="column-header col-header-table col-altura color-detalle-otros">
+                <div class="header-val">Album</div>
+            </div>
+            <div class="column-header col-header-table col-altura color-detalle-otros">
+                <div class="header-val">Time</div>
+            </div>
+        </div>
+        <div class="cancioneslist-detalle" *ngFor="let item of canciones.song">
+            <div class="col-detalle color-detalle detalle-position">
+                <div class="detalle-position">
+                    <div class="card-song">
+                        <div class="img-song">
+                            <img [src]="item.imgurl" height="40px" width="40px">
+                        </div>
+                        <div class="cancion-titulo">{{item.cancion}}</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-detalle color-detalle-otros">
+                <div class="detalle-position"> {{item.artistas}} </div>
+            </div>
+            <div class="col-detalle color-detalle-otros ">
+                <div class="detalle-position">
+                    {{item.album}}
+                </div>
+            </div>
+            <div class="col-detalle color-detalle-otros detalle-position">
+                <div class="detalle-position">
+                    {{item.time}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

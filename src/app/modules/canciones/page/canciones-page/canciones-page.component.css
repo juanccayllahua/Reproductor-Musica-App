@@ -1,0 +1,123 @@
+.title-canciones {
+    color: #FFF;
+    font-weight: 600;
+    margin: 0 0 0 17rem;
+    padding: 0 10px;
+
+}
+
+.table-container {
+    margin: 0 0 0 17rem;
+    padding: 0 10px;
+    width: 68%;
+    background: rgb(255 255 255 / 5%);
+
+}
+
+.table-canciones {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.canciones-list-header {
+    /* background: #1f1f1f; */
+    display: table-row;
+    color: #FFF;
+    position: relative;
+
+
+}
+
+.col-header-table {
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 0;
+
+
+}
+
+.header-val {
+    margin-left: 10px;
+    /* margin-right: 20px */
+}
+
+.column-header {
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 0;
+
+
+}
+
+.column-header::before {
+
+    display: inline-block;
+    content: '';
+    height: 16px;
+    width: 1px;
+    position: absolute;
+    top: 7px;
+    border-radius: 0.5px;
+    background: #b7b7b8;
+
+
+}
+
+.col-header-titel {
+    position: absolute;
+    left: -15px;
+
+}
+
+.col-altura {
+    padding-bottom: 6px;
+    height: 32px;
+    border-radius: 0;
+
+
+}
+
+.cancioneslist-detalle {
+    /* background:#232323; */
+    height: 54px;
+    display: table-row;
+
+    position: relative;
+    z-index: 1;
+}
+
+.color-detalle {
+    color: #e4e4eb;
+}
+
+.color-detalle-otros {
+    color: #a1a1a6;
+}
+
+
+.col-detalle {
+    display: table-cell;
+    vertical-align: middle;
+    overflow: unset;
+    box-sizing: content-box;
+    -webkit-padding-start: 0;
+    padding-inline-start: 0;
+    -webkit-padding-end: 0;
+    padding-inline-end: 0;
+}
+
+.detalle-position {
+    margin-left: 10px;
+    /* margin-right: 20px */
+}
+
+.card-song {
+    display: grid;
+    display: flex;
+    align-items: center;
+}
+
+.img-song {
+    margin-inline-end: 20px;
+}

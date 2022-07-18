@@ -3,8 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'',
+    path:'tunner',
     loadChildren:()=> import('../tuner/tuner.module').then(m=>m.TunerModule)
+  },
+  {
+    path:'artista',
+    loadChildren:()=> import('../artistas/artistas.module').then(m=>m.ArtistasModule)
+  },
+  {
+    path:'cancion',
+    loadChildren:()=> import('../canciones/canciones.module').then(m=>m.CancionesModule)
   }
 ];
 

@@ -1,0 +1,72 @@
+.title-artista {
+    color: #FFF;
+    font-weight: 600;
+    margin: 0 0 0 17rem;
+    padding: 0 10px;
+}
+
+.artista-container {
+    margin: 0 0 0 17rem; 
+    display: grid;
+    padding: 0 10px;
+    grid-template-columns: repeat(4, .19fr);
+}
+
+.card-artist {
+    display: flex;
+    position: fixed;
+    min-width: 185px;
+    min-height: 185px;
+    color: #FFF;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    font-size: 20px;
+    background-image: radial-gradient(circle, #002467 10%, #ce384a 30%);
+    border-radius: 5px;
+}
+
+.card-artist2 {
+    display: flex;
+    position: fixed;
+    min-width: 185px;
+    min-height: 185px;
+    color: #FFF;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    font-size: 20px; 
+    background: radial-gradient(circle, rgb(12, 182, 83) 0%, rgb(64, 24, 83) 30%);
+    border-radius: 5px;
+}
+.card-artist3 {
+    display: flex;
+    position: fixed;
+    min-width: 185px;
+    min-height: 185px;
+    color: #FFF;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    font-size: 20px; 
+    background: radial-gradient(circle, rgb(22, 60, 165) 0%, rgb(21, 177, 86) 30%);
+    border-radius: 5px;
+}
+
+
+.card-artist4 {
+    display: flex;
+    position: fixed;
+    min-width: 185px;
+    min-height: 185px;
+    color: #FFF;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    font-size: 20px; 
+    background: radial-gradient(circle, rgb(14, 71, 226) 10%, rgb(199, 12, 224) 29%);
+    border-radius: 5px;
+}
+.title-artist {
+    top: 10
+}
