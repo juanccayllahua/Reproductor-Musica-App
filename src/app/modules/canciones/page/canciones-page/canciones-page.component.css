@@ -1,16 +1,17 @@
 .title-canciones {
     color: #FFF;
     font-weight: 600;
-    margin: 0 0 0 17rem;
+    /* margin: 0 0 0 17rem; */
     padding: 0 10px;
 
 }
 
 .table-container {
-    margin: 0 0 0 17rem;
+    /* margin: 0 0 0 17rem; */
     padding: 0 10px;
-    width: 68%;
-    background: rgb(255 255 255 / 5%);
+    /* width: 68%; */
+    background-color: rgba(160, 157, 157, 0.05);
+    
 
 }
 
@@ -46,6 +47,7 @@
     display: table-cell;
     vertical-align: middle;
     padding-top: 0;
+    
 
 
 }
@@ -59,7 +61,8 @@
     position: absolute;
     top: 7px;
     border-radius: 0.5px;
-    background: #b7b7b8;
+    background: #353538;
+    
 
 
 }
@@ -108,8 +111,7 @@
 }
 
 .detalle-position {
-    margin-left: 10px;
-    /* margin-right: 20px */
+    margin-left: 10px; 
 }
 
 .card-song {
@@ -120,4 +122,25 @@
 
 .img-song {
     margin-inline-end: 20px;
+}
+.detalle-position-time{
+    display: flex; 
+    justify-content: center;
+    
+    margin-left: 10px;  
+    flex-direction: row;
+}
+.cancion-share{
+    color: var(--color-3);
+    font-weight: 700;
+}
+.timer-music{
+    margin-inline-end: 10px;
+}
+.cancion-header-col-wit{
+    width: 42%;
+}
+
+.cancion-timer-col-wit{
+    width: 92px;
 }

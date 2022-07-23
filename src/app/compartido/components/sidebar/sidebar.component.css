@@ -49,3 +49,8 @@ li {
 .web-navigation__nav-icon {
     margin-inline-end: 8px
 }
+.logo{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}

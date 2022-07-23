@@ -1,7 +1,7 @@
 .header-usr{
     display: flex;
-    margin: 0 0 0 17rem;
-    justify-content: end;
+    /* margin: 0 0 0 17rem; */
+    justify-content: end; 
 
 }
 .btn-login{

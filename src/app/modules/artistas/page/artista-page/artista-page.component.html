@@ -1,34 +1,15 @@
 <div class="title-artista">Artistas</div>
+<div class="list-artist">
+    <ul>
 
+        <li class="item-artist noselect cursor-cartas" *ngFor="let item of artistas.nombres">
+            <button [ngClass]="item.classtema">
+                <div>
+                    <div class="title-artist">{{item.artistaname}}</div>
+                </div>
+            </button>
+        </li>
 
+    </ul>
 
-<div class="artista-container">
-    <div class="card-container noselect cursor-cartas">
-        <div class="card-artist4">
-            <div class="title-artist">Corazon Serrano</div>
-
-
-        </div>
-    </div>
-    <div class="card-container">
-        <div class="card-artist2 noselect cursor-cartas">
-            <div class="title-artist">Los Ronish</div>
-
-
-        </div>
-    </div>
-    <div class="card-container">
-        <div class="card-artist noselect cursor-cartas">
-            <div class="title-artist">Los Puntos</div>
-
-
-        </div>
-    </div>
-    <div class="card-container">
-        <div class="card-artist3 noselect cursor-cartas">
-            <div class="title-artist">Gentiles</div>
-
-
-        </div>
-    </div>
 </div>

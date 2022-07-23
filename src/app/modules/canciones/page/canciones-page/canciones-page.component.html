@@ -2,7 +2,7 @@
 <div class="table-container noselect">
     <div class="table-canciones">
         <div class="canciones-list-header">
-            <div class="col-header-table col-altura color-detalle-otros">
+            <div class="col-header-table col-altura color-detalle-otros cancion-header-col-wit">
                 <div class="header-val">Cancion</div>
             </div>
             <div class="column-header col-header-table col-altura color-detalle-otros">
@@ -11,7 +11,7 @@
             <div class="column-header col-header-table col-altura color-detalle-otros">
                 <div class="header-val">Album</div>
             </div>
-            <div class="column-header col-header-table col-altura color-detalle-otros">
+            <div class="column-header col-header-table col-altura color-detalle-otros cancion-timer-col-wit">
                 <div class="header-val">Time</div>
             </div>
         </div>
@@ -36,10 +36,15 @@
                 </div>
             </div>
             <div class="col-detalle color-detalle-otros detalle-position">
-                <div class="detalle-position">
-                    {{item.time}}
+                <div class="detalle-position-time">
+                    <div class="timer-music">
+                        {{item.time}}
+                    </div>
+                    <div class="cancion-share cursor-cartas">...</div>
                 </div>
+
             </div>
+
         </div>
 
     </div>

@@ -1,37 +1,50 @@
-.title-tuner{
-    
+.title-tuner {
+
     color: #FFF;
-    font-weight: 600;
-    margin: 0 0 0 17rem; 
+    font-weight: 600; 
     padding: 0 10px;
 }
-.list-music{
-  
+
+.list-music {
+
     color: #FFF;
-    font-weight: 600;  
-    display: flex;
-    margin: 0 0 0 17rem; 
-    
-    
+    font-weight: 600;
+    display: flex; 
+
+
 }
-ul{
+
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0 10px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr ;
     grid-gap: 3px;
+
+}
+
+.item-artist {
+    border-radius: 5px;
+    width: 320px;
+    padding: 0 0 0 0;
     
 }
 
-.item-artist{
-    border-radius: 5px; 
-    width: 320px;
-    height: 105px; 
-    padding: 0 0 0 0; 
-}
- 
-button{
+button {
     border: 0;
     border-radius: 8px;
+    bottom: 0;
+    position: relative;
+}
+
+.categoria-titulo {
+    color: #FFF;
+    top: 100%;
+    margin-top: -40px;
+    display: flex;
+    padding-left: 5px;
+    justify-items: start;
+    font-size: 17px;
+    font-weight: 700;
 }
