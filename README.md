@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 intentando imitar a apple music
 
-<img height="100%" width="100%" src="https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/file%2Freproductormusical.png?alt=media&token=2affc0b7-8800-4aa6-8474-490840cdb53d">
+<img height="100%" width="100%" src="https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/file%2Freproduce.png?alt=media&token=294f8b41-296d-4051-9498-e9688fda8238">
