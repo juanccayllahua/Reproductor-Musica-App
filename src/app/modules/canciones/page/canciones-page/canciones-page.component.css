@@ -11,9 +11,18 @@
     padding: 0 10px;
     /* width: 68%; */
     background-color: rgba(160, 157, 157, 0.05);
-    
+    padding-bottom: 80px;
+     height: auto;
 
 }
+
+.table-container::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+    display: none;  /* Ocultar scroll */
+}
+
+  
 
 .table-canciones {
     display: table;

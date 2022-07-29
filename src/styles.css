@@ -18,6 +18,7 @@ body{
     font-weight: 400;
     line-height: 1.46667;
     letter-spacing: 0;
+    overflow-y: hidden;
 }
  
 .noselect {
@@ -32,3 +33,5 @@ body{
   .cursor-cartas{
     cursor: pointer;
   }
+
+ 

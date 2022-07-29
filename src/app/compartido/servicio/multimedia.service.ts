@@ -19,20 +19,15 @@ export class MultimediaService {
 
   public playerPorcentaje$: BehaviorSubject<number> = new BehaviorSubject(0)
 
+  public volPorcentaje$: BehaviorSubject<number> = new BehaviorSubject(1)
+
   constructor() {
     this.audio = new Audio()
 
-    this.CancionInfo$.subscribe(responseOk => {
-
-
-      if (responseOk) {
-        // console.log("url", responseOk);
+    this.CancionInfo$.subscribe(responseOk => { 
+      if (responseOk) { 
         this.setAudio(responseOk)
-        // console.log('==> hola llego al servicio compartido');
-
-
-      }
-
+      } 
     })
 
     this.escucharTodosLosEventos();
@@ -147,6 +142,20 @@ export class MultimediaService {
     const porcentajeASegundos = (porcentaje * duration) / 100;
 
     this.audio.currentTime = porcentajeASegundos
+  }
+  
+  public seekVolumen(volumen:number):void{ 
+      // console.log('llegó tu volumen===>',volumen);
+      
+    if(volumen<0){
+      volumen=0.1
+    } else if(volumen>1){
+      volumen=1.0
+    }
+    // console.log('intentando cambiar volumen',volumen);
+      
+      this.audio.volume=volumen
+      this.volPorcentaje$.next(volumen)
   }
  
 

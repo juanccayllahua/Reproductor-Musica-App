@@ -16,25 +16,25 @@ export class TunerPageComponent implements OnInit {
       {
         _id:1,
         categoria: 'Cumbia', 
-        imgurl: 'https://is1-ssl.mzstatic.com/image/thumb/Features112/v4/6f/3d/6f/6f3d6f43-20d7-0bbe-e8b4-dc5a94fe52f2/source/340x113sr.webp',
+        imgurl: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/banner%2F1imgbanner.webp?alt=media&token=f75a7b93-dabc-4ec0-9606-df7e66ad13ba',
         router: ['/', 'categ?id=19999117']
       },
       {
         _id:2,
         categoria: 'Electro', 
-        imgurl: 'https://is1-ssl.mzstatic.com/image/thumb/Features112/v4/51/95/7c/51957c7c-d270-0b5c-6f44-47e869bd7630/source/1040x346sr.webp',
+        imgurl: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/banner%2F2imgbanner.webp?alt=media&token=f869abc1-9166-489d-be3a-9f3636f85dac',
         router: ['/', 'categ?id=19999117']
       },
       {
         _id:3,
         categoria: 'Cumbia Sureña', 
-        imgurl: 'https://is2-ssl.mzstatic.com/image/thumb/Features114/v4/1e/24/bb/1e24bb2f-a013-ee49-4e23-82d0d94637d0/source/340x113sr.webp',
+        imgurl: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/banner%2F3banner.webp?alt=media&token=64be8367-873f-4310-9177-8be500087858',
         router: ['/', 'categ?id=19999117']
       },
       {
         _id:4,
         categoria: 'Huayno', 
-        imgurl: 'https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/e6/c9/68/e6c96806-6ab4-2b80-5dcc-532cc82bf7cc/source/1040x346sr.webp',
+        imgurl: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/banner%2F4banner.webp?alt=media&token=70e38507-9872-47cf-b39a-555e1f44374b',
         router: ['/', 'categ?id=19999117']
       }
 

@@ -15,7 +15,7 @@
                 <div class="header-val">Time</div>
             </div>
         </div>
-        <div class="cancioneslist-detalle" *ngFor="let item of canciones.song">
+        <div class="cancioneslist-detalle" *ngFor="let item of canciones?.song">
             <div class="col-detalle color-detalle detalle-position">
                 <div class="detalle-position">
                     <div class="card-song ">
@@ -39,6 +39,7 @@
                     </div>
                 </div>
             </div>
+            <!-- {{item._id}} -->
             <div class="col-detalle color-detalle-otros">
                 <div class="detalle-position"> {{item.nombre}} </div>
             </div>

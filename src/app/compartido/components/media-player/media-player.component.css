@@ -30,7 +30,7 @@
     bottom: 0;
 }
 
-.control-secundario {}
+ 
 
 .rdm-control {
     width: 32px;
@@ -42,6 +42,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    fill:#9b9595;
 }
 
 /* progressbar */
@@ -67,11 +68,7 @@
     color: #d8d8d8;
     
 }
-
-.progress {
-    
-
-}
+ 
 
 .progresbar-inputarange {
     display: flex;
@@ -99,7 +96,7 @@
     height: 18px;
     padding: 2px;
     width: 18px;
-    fill: #d8d8d8;
+    fill: #9b9595;
     -webkit-margin-end: 2px;
     margin-inline-end: 2px;
 }
@@ -162,9 +159,7 @@ input[type=range]::-webkit-slider-runnable-track {
     background: transparent;
 }
 
-/* .web-chrome-playback-lcd__volume-scrubber{
-    width: 200px!important;
-} */
+
 
 .web-chrome-playback-lcd__volume-scrubber{
     width: 70px!important;
