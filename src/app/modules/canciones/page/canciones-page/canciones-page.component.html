@@ -18,21 +18,33 @@
         <div class="cancioneslist-detalle" *ngFor="let item of canciones.song">
             <div class="col-detalle color-detalle detalle-position">
                 <div class="detalle-position">
-                    <div class="card-song">
-                        <div class="img-song">
-                            <img [src]="item.imgurl" height="40px" width="40px">
+                    <div class="card-song ">
+                        <div class="img-song cursor-cartas" (click)="reproducir(item)">
+
+                            <img [src]="item.cover" height="40px" width="40px">
+                            <div class="artwork-overlay list-lockup-content__artwork-overlay">
+                                <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+                                    class="button-playLista cursor-cartas">
+                                    <path
+                                        d="M4.4 15.14l10.386-6.096c.842-.459.794-1.64 0-2.097L4.401.85c-.87-.53-2-.12-2 .82v12.625c0 .966 1.06 1.4 2 .844z"
+                                        fill-rule="nonzero"></path>
+                                </svg>
+
+
+
+                            </div>
                         </div>
-                        <div class="cancion-titulo">{{item.cancion}}</div>
+                        <div class="cancion-titulo">{{item.album}}</div>
 
                     </div>
                 </div>
             </div>
             <div class="col-detalle color-detalle-otros">
-                <div class="detalle-position"> {{item.artistas}} </div>
+                <div class="detalle-position"> {{item.nombre}} </div>
             </div>
             <div class="col-detalle color-detalle-otros ">
                 <div class="detalle-position">
-                    {{item.album}}
+                    {{item.cancion}}
                 </div>
             </div>
             <div class="col-detalle color-detalle-otros detalle-position">

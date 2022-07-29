@@ -13,7 +13,8 @@
             </div>
         </div>
         <div class="control-main">
-            <button class="button-reset playback-btn" aria-label="Previous">
+             
+            <button class="button-reset playback-btn" (click)="adelantaretrocede(artista._id,'back')" aria-label="Previous">
                 <svg width="100%" height="100%" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
                     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421">
@@ -22,16 +23,28 @@
                         style="fill-rule:nonzero"></path>
                 </svg>
             </button>
-            <button class="button-reset playback-btn" aria-label="Play">
-                <svg width="100%" height="100%" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+            <button class="button-reset playback-btn" (click)="multimediaservices.pauseplay()" aria-label="Play">
+                <svg *ngIf="state === 'paused' " width="100%" height="100%" viewBox="0 0 34 34" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
                     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421">
                     <path
                         d="M28.228,18.327l-16.023,8.983c-0.99,0.555 -2.205,-0.17 -2.205,-1.318l0,-17.984c0,-1.146 1.215,-1.873 2.205,-1.317l16.023,8.982c1.029,0.577 1.029,2.077 0,2.654Z"
                         style="fill-rule:nonzero"></path>
                 </svg>
+                 
+
+                <svg *ngIf="state !== 'paused' " width="100%" height="100%" viewBox="0 0 34 34" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+                    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421">
+                    <path
+                        d="M20.3,6l2.9,0c0.994,0 1.8,0.806 1.8,1.8l0,18.4c0,0.994 -0.806,1.8 -1.8,1.8l-2.9,0c-0.994,0 -1.8,-0.806 -1.8,-1.8l0,-18.4c0,-0.994 0.806,-1.8 1.8,-1.8Zm-9.5,0l2.9,0c0.994,0 1.8,0.806 1.8,1.8l0,18.4c0,0.994 -0.806,1.8 -1.8,1.8l-2.9,0c-0.994,0 -1.8,-0.806 -1.8,-1.8l0,-18.4c0,-0.994 0.806,-1.8 1.8,-1.8Z"
+                        style="fill-rule:nonzero"></path>
+                </svg>
+
             </button>
-            <button class="button-reset playback-btn" aria-label="Next">
+            <!-- {{canciones.song[0]|json}} -->
+             
+            <button class="button-reset playback-btn" (click)="adelantaretrocede(artista._id,'next')" aria-label="Next">
                 <svg width="100%" height="100%" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
                     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421">
@@ -52,44 +65,44 @@
             </div>
         </div>
     </div>
+    <!-- *ngIf="multimediaservices.CancionInfo$ | async as artista" -->
     <div class="reprod-avance-info">
         <div class="artist-bg">
-            <img class="media-artwork-v2__image media-artwork-v2__image--fallback" 
-            src="https://music.apple.com/assets/product/MissingArtworkMusic_dark.svg" decoding="async" height="44" width="44" role="presentation">
-            <picture style="display:none">
-                <!---->
-                <source
-                    srcset="https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/5e/b4/dc/5eb4dc73-cb56-5aaa-761e-04f2bcf16100/13UABIM54244.rgb.jpg/44x44bb-60.jpg 44w, https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/5e/b4/dc/5eb4dc73-cb56-5aaa-761e-04f2bcf16100/13UABIM54244.rgb.jpg/88x88bb-60.jpg 88w"
-                    type="image/jpeg">
+            <!-- {{artista}} -->
+            <div *ngIf="!artista">
+                <img class="media-artwork-v2__image media-artwork-v2__image--fallback"
+                    src="https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/file%2Fmusicicon.svg?alt=media&token=a8d6b74e-559d-4513-ada3-508e8857dfb1"
+                    decoding="async" height="44" width="44" role="presentation">
+            </div>
+            <picture>
 
-                <img class="media-artwork-v2__image" sizes="44px"
-                    src="https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/5e/b4/dc/5eb4dc73-cb56-5aaa-761e-04f2bcf16100/13UABIM54244.rgb.jpg/44x44bb-60.jpg 44w, https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/5e/b4/dc/5eb4dc73-cb56-5aaa-761e-04f2bcf16100/13UABIM54244.rgb.jpg/88x88bb-60.jpg 88w"
-                    decoding="async" height="44" width="44" alt="Como la Flor" role="presentation">
+                <img *ngIf="artista" class="media-artwork-v2__image" sizes="44px" [src]="artista.cover" decoding="async"
+                    height="44" width="44" role="presentation">
             </picture>
         </div>
         <div class="lcd-descripcion">
             <div class="artista-reprod">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-boombox-fill reproductor-icon" viewBox="0 0 16 16">
-                <path
-                    d="M14.5.5a.5.5 0 0 0-1 0V2H1a1 1 0 0 0-1 1v2h16V3a1 1 0 0 0-1-1h-.5V.5ZM2.5 4a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1Zm2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1Zm7.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm1.5.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1Zm-7-1h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1Zm-2 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm.5-1.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm6.5 1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm0-1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z" />
-                <path
-                    d="M16 6H0v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V6ZM4.5 13a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Zm7 0a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
-            </svg>
-                <div class="text-song" style="display: none;">
-                    Como la flor
+                <svg *ngIf="!artista" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-boombox-fill reproductor-icon" viewBox="0 0 16 16">
+                    <path
+                        d="M14.5.5a.5.5 0 0 0-1 0V2H1a1 1 0 0 0-1 1v2h16V3a1 1 0 0 0-1-1h-.5V.5ZM2.5 4a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1Zm2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1Zm7.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm1.5.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1Zm-7-1h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1Zm-2 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm.5-1.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm6.5 1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm0-1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z" />
+                    <path
+                        d="M16 6H0v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V6ZM4.5 13a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Zm7 0a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
+                </svg>
+                <div class="text-song" *ngIf="artista">
+                    {{artista.album }}
                 </div>
-                <div class="text-artis" style="display: none;">
-                    Selena
+                <div class="text-artis" *ngIf="artista">
+
+                    {{artista.nombre }}
                 </div>
             </div>
             <div class="progress">
                 <div class="contenedor-progressbar">
-                    <div class="progresbar-inputarange" style="display: none;">
-                        <input  class="web-chrome-playback-lcd__scrub" min="0" max="90" step="1" role="slider"
-                            aria-valuemin="0" aria-valuenow="1" aria-valuemax="90" aria-valuetext="1 Second"
-                            aria-orientation="horizontal" type="range" style="--progress: 1.1111111111111112%">
-
+                    <div class="progresbar-inputarange">
+                        <input #progressBar (click)="handlePosition($event)" class="web-chrome-playback-lcd__scrub"
+                            aria-orientation="horizontal" type="range" [value]="porcenta "
+                            [ngStyle]="{'--porcentaje': ''+porcenta +'%'} " />
 
                     </div>
                 </div>

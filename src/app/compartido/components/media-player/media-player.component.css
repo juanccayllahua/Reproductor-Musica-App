@@ -57,7 +57,7 @@
 }
 
 .artista-reprod {
-    padding-top: 5px;
+    /* padding-top: 5px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,7 +69,7 @@
 }
 
 .progress {
-    width: 1fr;
+    
 
 }
 
@@ -113,6 +113,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 500px;
+    padding-right: 4px;
 
 }
 
@@ -134,10 +136,12 @@ input[type="range"] {
     background: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
     background-image: linear-gradient(var(--color-3), var(--color-3));
-    background-size: 90% 100%;
+    background-size: var(--porcentaje)  , 100%;
+     /* 10% 100%; */
     background-repeat: no-repeat;
 
 }
+
 
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -145,7 +149,7 @@ input[type="range"]::-webkit-slider-thumb {
     width: 2px;
     margin-top: -3px;
     /* border-radius: 50%; */
-    background: #ff4500;
+    background: #747171;
     cursor: ew-resize;
     box-shadow: 0 0 2px 0 #555;
     transition: background .3s ease-in-out;
@@ -171,3 +175,8 @@ input[type=range]::-webkit-slider-runnable-track {
     justify-content: flex-end;
      
 }
+
+button{
+    cursor:pointer;
+}
+ 

@@ -115,9 +115,11 @@
 }
 
 .card-song {
-    display: grid;
+    /* display: grid; */
     display: flex;
     align-items: center;
+    /* position: absolute; */
+    
 }
 
 .img-song {
@@ -143,4 +145,26 @@
 
 .cancion-timer-col-wit{
     width: 92px;
+}
+
+.button-playLista{
+    display: none;
+}
+/* .button-playLista :hover{
+    display: flex;
+} */
+.card-song:hover .button-playLista{
+   top:0;
+   bottom: 0;
+   padding: 10px 10px 10px 10px; 
+   position: absolute;
+   display: flex;
+   fill: #FFF;
+   background: #e4e4eb71;
+   width: 20px;
+   /* margin: 0 auto; */
+   /* justify-content: center;
+   align-items: center;
+   justify-items: center; */
+    
 }
