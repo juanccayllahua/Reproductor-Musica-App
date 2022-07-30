@@ -17,6 +17,7 @@
         </div>
         <div class="cancioneslist-detalle" *ngFor="let item of canciones?.song">
             <div class="col-detalle color-detalle detalle-position">
+
                 <div class="detalle-position">
                     <div class="card-song ">
                         <div class="img-song cursor-cartas" (click)="reproducir(item)">
@@ -29,13 +30,21 @@
                                         d="M4.4 15.14l10.386-6.096c.842-.459.794-1.64 0-2.097L4.401.85c-.87-.53-2-.12-2 .82v12.625c0 .966 1.06 1.4 2 .844z"
                                         fill-rule="nonzero"></path>
                                 </svg>
-
-
-
                             </div>
                         </div>
                         <div class="cancion-titulo">{{item.album}}</div>
-
+                        <div class="playing-music" *ngIf="item?._id === artista?._id">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fa586a"
+                                class="bi bi-music-note" viewBox="0 0 16 16">
+                                <path d="M9 13c0 1.105-1.12 2-2.5 2S4 14.105 4 13s1.12-2 2.5-2 2.5.895 2.5 2z" />
+                                <path fill-rule="evenodd" d="M9 3v10H8V3h1z" />
+                                <path d="M8 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 13 2.22V4L8 5V2.82z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fa586a" class="bi bi-music-player-fill" viewBox="0 0 16 16">
+                                <path d="M8 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm1 2h6a1 1 0 0 1 1 1v2.5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm3 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                              </svg>
+                        </div>
                     </div>
                 </div>
             </div>

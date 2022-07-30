@@ -177,3 +177,14 @@
    justify-items: center; */
     
 }
+
+.playing-music .playback-bars__svg{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    fill:var(--color-3);
+    /* position: fixed; */
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    
+}

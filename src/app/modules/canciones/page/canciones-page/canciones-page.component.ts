@@ -12,13 +12,21 @@ export class CancionesPageComponent implements OnInit {
     song: Array<any>, accessLink: Array<any>
   } = { song: [], accessLink: [] }
   cancion: CancionModel = { _id: 0, nombre: '', album: '', url: '', cover: '' };
+  artista: any = []
+
   constructor(private _multimediaServices: MultimediaService) {
 
   };
 
 
   ngOnInit(): void {
-
+    const observer$0 = this._multimediaServices.CancionInfo$.subscribe
+      (artista => {
+        this.artista = artista
+        console.log('hola',artista);
+        
+      }
+      )
     // this.cancion._id=1
     // this.cancion.url="C:\appnode\ServicioConvertidor\public\MartinGarrix.mp4"
     // this.reproducirMusica(this.cancion);
@@ -95,7 +103,7 @@ export class CancionesPageComponent implements OnInit {
         url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/file%2FAventuraEnsenameAOlvidar.mp3?alt=media&token=f24905d9-bea6-46de-84b8-d48065dc6d9b',
         router: ['/', 'song?id=19999117']
 
-      },{
+      }, {
         _id: 8,
         cancion: 'Reggueton',
         nombre: 'CNCO FT Yandel',
@@ -201,8 +209,10 @@ export class CancionesPageComponent implements OnInit {
         router: ['/', 'song?id=19999117']
 
       }
-      
+
     ]
+
+    // this.listaObservadores$ = [observer$0]
   }
 
 
