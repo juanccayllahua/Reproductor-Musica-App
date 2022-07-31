@@ -180,6 +180,9 @@
 
 .playing-music .playback-bars__svg{
     display: flex;
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
     flex-direction: column;
     justify-items: center;
     fill:var(--color-3);
@@ -187,4 +190,72 @@
     animation: bounce; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 2s;
     
+}
+
+/* .playback-bars__bar--2{
+    fill: rebeccapurple;
+} */
+/* #bar-ember222{
+     
+    animation-name: barra;
+    animation-duration:  2s;
+    animation-iteration-count: infinite;
+} */
+
+.playback-bars__bar--1{
+    animation: barra2 5s ease infinite;
+}
+
+.playback-bars__bar--2{
+    animation: barra2 2s ease infinite;
+}
+.playback-bars__bar--3{
+    animation: barra2 4s ease infinite;
+}
+.playback-bars__bar--4{
+    animation: barra2 1s ease infinite;
+}
+
+@keyframes barra1 {
+    from{
+        /* transform: translate(2.9668 0); */
+        transform: translateY(5%) ;
+    }
+    to{
+        transform:  translateY(30%);
+        /* transform: translateY(30%); */
+    }
+}
+
+@keyframes barra2 {
+    from{
+        /* transform: translate(2.9668 0); */
+        transform: translateY(5%) ;
+    }
+    to{
+        transform:  translateY(80%);
+        /* transform: translateY(30%); */
+    }
+}
+
+@keyframes barra3 {
+    from{
+        /* transform: translate(2.9668 0); */
+        transform: translateY(5%) ;
+    }
+    to{
+        transform:  translateY(50%);
+        /* transform: translateY(30%); */
+    }
+} 
+
+@keyframes barra4 {
+    from{
+        /* transform: translate(2.9668 0); */
+        transform: translateY(5%) ;
+    }
+    to{
+        transform:  translateY(22%);
+        /* transform: translateY(30%); */
+    }
 }
