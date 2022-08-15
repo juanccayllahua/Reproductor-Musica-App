@@ -22,7 +22,7 @@
                     <div class="card-song ">
                         <div class="img-song cursor-cartas" (click)="reproducir(item)">
 
-                            <img [src]="item.cover" height="40px" width="40px">
+                            <img [src]="item.img" height="40px" width="40px">
                             <div class="artwork-overlay list-lockup-content__artwork-overlay">
                                 <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
                                     class="button-playLista cursor-cartas">
@@ -32,8 +32,8 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="cancion-titulo">{{item.album}}</div>
-                        <div class="playing-music" *ngIf="item?._id === artista?._id">
+                        <div class="cancion-titulo">{{item.cancion}}</div>
+                        <div class="playing-music" *ngIf="item?.id === artista?.id">
 
                             <svg class="playback-bars__svg" viewBox="0 0 11 11">
                                 <defs>
@@ -43,16 +43,16 @@
                                     </mask>
                                 </defs>
                                 <g >
-                                    <use  class="playback-bars__bar playback-bars__bar--1" href="#bar-ember222"></use>
+                                    <use [ngClass]="(state=='playing')?'playback-bars__bar--1':'playback-bars__bar'" class="playback-bars__bar"  href="#bar-ember222"></use>
                                 </g>
                                 <g id="barra2" transform="translate(2.9668 0)">
-                                    <use  class="playback-bars__bar playback-bars__bar--2" href="#bar-ember222"></use>
+                                    <use [ngClass]="(state=='playing')?'playback-bars__bar--2':'playback-bars__bar'" class="playback-bars__bar" href="#bar-ember222"></use>
                                 </g>
                                 <g transform="translate(5.9333 0)">
-                                    <use class="playback-bars__bar playback-bars__bar--3" href="#bar-ember222"></use>
+                                    <use [ngClass]="(state=='playing')?'playback-bars__bar--3':'playback-bars__bar'" class="playback-bars__bar" href="#bar-ember222"></use>
                                 </g>
                                 <g transform="translate(8.8999 0)">
-                                    <use class="playback-bars__bar playback-bars__bar--4" href="#bar-ember222"></use>
+                                    <use [ngClass]="(state=='playing')?'playback-bars__bar--4':'playback-bars__bar'" class="playback-bars__bar" href="#bar-ember222"></use>
                                 </g>
                             </svg>
                         </div>
@@ -61,17 +61,17 @@
             </div>
             <!-- {{item._id}} -->
             <div class="col-detalle color-detalle-otros">
-                <div class="detalle-position"> {{item.nombre}} </div>
+                <div class="detalle-position"> {{item.artista}} </div>
             </div>
             <div class="col-detalle color-detalle-otros ">
                 <div class="detalle-position">
-                    {{item.cancion}}
+                    {{item.album}}
                 </div>
             </div>
             <div class="col-detalle color-detalle-otros detalle-position">
                 <div class="detalle-position-time">
                     <div class="timer-music">
-                        {{item.time}}
+                        {{item.duracion}}
                     </div>
                     <div class="cancion-share cursor-cartas">...</div>
                 </div>

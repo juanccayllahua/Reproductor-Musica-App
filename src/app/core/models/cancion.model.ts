@@ -1,10 +1,10 @@
 import { ArtistModel } from "./artist.model";
 
 export interface CancionModel {
-    nombre: string;
+    cancion: string;
     album: string;
-    cover: string;
+    img: string;
     url: string;
-    _id: string | number;
+    id: string | number;
     artist?: ArtistModel;
 }

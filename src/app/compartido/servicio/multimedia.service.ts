@@ -37,7 +37,7 @@ export class MultimediaService {
   public setAudio(cancion: CancionModel) {
     // (this.audio.played) ? this.audio.pause() : this.audio.play()
 
-     console.log("reproduciendo ...=>");
+    //  console.log("reproduciendo ...=>");
     this.audio.src = cancion.url;
     this.audio.play();
 
@@ -58,13 +58,13 @@ export class MultimediaService {
     (this.audio.paused) ? this.audio.play() : this.audio.pause()
   }
 
-  public repPausePlay(): void {
-    if (this.audio.paused) {
+  // public repPausePlay(): void {
+  //   if (this.audio.paused) {
 
-    } else {
+  //   } else {
 
-    }
-  }
+  //   }
+  // }
 
   private calculaTiempo = () => {
     const { duration, currentTime } = this.audio;

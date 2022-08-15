@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { CancionModel } from 'src/app/core/models/cancion.model';
+import { CancionesService } from 'src/app/modules/canciones/services/canciones.service';
 import { MultimediaService } from '../../servicio/multimedia.service';
 
 @Component({
@@ -24,7 +25,7 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
   } = { song: [], accessLink: [] }
 
 
-  constructor(public multimediaservices: MultimediaService) { }
+  constructor(public multimediaservices: MultimediaService, private _musicaservices: CancionesService) { }
 
   ngOnInit(): void {
 
@@ -37,7 +38,7 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
       .subscribe(status => {
         this.state = status;
         if (this.state === 'ended') {
-          console.log('alerta ::> '); 
+          console.log('alerta ::> ');
           this.adelantaretrocede(this.artista._id, 'next')
 
         }
@@ -138,7 +139,7 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
         url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/file%2FAventuraEnsenameAOlvidar.mp3?alt=media&token=f24905d9-bea6-46de-84b8-d48065dc6d9b',
         router: ['/', 'song?id=19999117']
 
-      },{
+      }, {
         _id: 8,
         cancion: 'Reggueton',
         nombre: 'CNCO FT Yandel',
@@ -244,6 +245,13 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
         router: ['/', 'song?id=19999117']
       }
     ]
+
+    this._musicaservices.getAllMusic$().subscribe(
+      (cancion) => {
+        this.canciones.song = cancion
+      }
+
+    )
   }
   ngOnDestroy(): void {
 
@@ -294,18 +302,18 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
 
     let unacancion: CancionModel;
     unacancion = {
-      album: this.canciones.song.find(x => x._id === id).album,
-      _id: this.canciones.song.find(x => x._id === id)._id,
-      cover: this.canciones.song.find(x => x._id === id).cover,
-      nombre: this.canciones.song.find(x => x._id === id).nombre,
-      url: this.canciones.song.find(x => x._id === id).url,
+      album: this.canciones.song.find(x => x.id === id).album,
+      id: this.canciones.song.find(x => x.id === id).id,
+      img: this.canciones.song.find(x => x.id === id).img,
+      cancion: this.canciones.song.find(x => x.id === id).cancion,
+      url: this.canciones.song.find(x => x.id === id).url,
     };
 
 
     console.log(unacancion);
     // this.multimediaservices.playerPorcentaje$.next(1)
     this.multimediaservices.CancionInfo$.next(unacancion)
-    
+
   }
 
 }

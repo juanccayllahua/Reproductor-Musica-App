@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MultimediaService } from 'src/app/compartido/servicio/multimedia.service';
 import { CancionModel } from 'src/app/core/models/cancion.model';
+import { CancionesService } from '../../services/canciones.service';
 
 @Component({
   selector: 'app-canciones-page',
@@ -11,10 +12,10 @@ export class CancionesPageComponent implements OnInit {
   canciones: {
     song: Array<any>, accessLink: Array<any>
   } = { song: [], accessLink: [] }
-  cancion: CancionModel = { _id: 0, nombre: '', album: '', url: '', cover: '' };
+  cancion: CancionModel = { id: 0, cancion: '', album: '', url: '', img: '' };
   artista: any = []
-
-  constructor(private _multimediaServices: MultimediaService) {
+  state: String = 'paused';
+  constructor(private _multimediaServices: MultimediaService, private _musicaservices: CancionesService) {
 
   };
 
@@ -27,6 +28,16 @@ export class CancionesPageComponent implements OnInit {
         
       }
       )
+
+      const observer$2 = this._multimediaServices.playerStatus$
+      .subscribe(status => {
+        this.state = status;
+        if (this.state === 'ended') {
+          //  console.log('finalizado');
+                      
+        }
+        // console.log('hola mundo ::: canciones >',this.state);
+      })
     // this.cancion._id=1
     // this.cancion.url="C:\appnode\ServicioConvertidor\public\MartinGarrix.mp4"
     // this.reproducirMusica(this.cancion);
@@ -212,6 +223,13 @@ export class CancionesPageComponent implements OnInit {
 
     ]
 
+
+    this._musicaservices.getAllMusic$().subscribe((canciones:any  )=>{
+      console.log('listando... servicio c#');
+      this.canciones.song = canciones;
+      console.log(canciones);
+      
+    })
     // this.listaObservadores$ = [observer$0]
   }
 

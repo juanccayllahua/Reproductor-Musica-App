@@ -30,7 +30,7 @@
     bottom: 0;
 }
 
- 
+
 
 .rdm-control {
     width: 32px;
@@ -42,7 +42,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    fill:#9b9595;
+    fill: #9b9595;
 }
 
 /* progressbar */
@@ -50,6 +50,7 @@
     background-color: rgba(255, 255, 255, 0.411);
     width: 100%;
     max-width: 800px;
+    /* height: 48px; */
     grid-area: 1/2/2/2;
     justify-self: start;
     display: grid;
@@ -66,9 +67,9 @@
     font-size: 12px;
     font-family: inherit;
     color: #d8d8d8;
-    
+
 }
- 
+
 
 .progresbar-inputarange {
     display: flex;
@@ -133,8 +134,8 @@ input[type="range"] {
     background: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
     background-image: linear-gradient(var(--color-3), var(--color-3));
-    background-size: var(--porcentaje)  , 100%;
-     /* 10% 100%; */
+    background-size: var(--porcentaje), 100%;
+    /* 10% 100%; */
     background-repeat: no-repeat;
 
 }
@@ -147,7 +148,8 @@ input[type="range"]::-webkit-slider-thumb {
     margin-top: -3px;
     /* border-radius: 50%; */
     background: #747171;
-    cursor: ew-resize;
+    /* cursor: ew-resize; */
+    cursor: pointer;
     box-shadow: 0 0 2px 0 #555;
     transition: background .3s ease-in-out;
 }
@@ -161,17 +163,17 @@ input[type=range]::-webkit-slider-runnable-track {
 
 
 
-.web-chrome-playback-lcd__volume-scrubber{
-    width: 70px!important;
+.web-chrome-playback-lcd__volume-scrubber {
+    width: 70px !important;
 }
-.web-chrome-playback-controls__platter-toggle-buttons{
+
+.web-chrome-playback-controls__platter-toggle-buttons {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-     
+
 }
 
-button{
-    cursor:pointer;
+button {
+    cursor: pointer;
 }
- 

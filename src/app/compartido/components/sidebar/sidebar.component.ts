@@ -30,7 +30,12 @@ export class SidebarComponent implements OnInit {
         name:'Escuchar',
         icon:'CancionIcon',
         router:['/','cancion']
-      }
+      },
+      // {
+      //   name:'Modo Video',
+      //   icon:'CancionIcon',
+      //   router:['/','cancion']
+      // }
     ]
 
   }
