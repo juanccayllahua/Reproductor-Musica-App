@@ -4,7 +4,8 @@ export interface CancionModel {
     cancion: string;
     album: string;
     img: string;
-    url: string;
+    url: string; 
+    artista:string;
     id: string | number;
     artist?: ArtistModel;
 }
