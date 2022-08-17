@@ -30,4 +30,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <img height="100%" width="100%" src="https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/file%2Freproduce.png?alt=media&token=294f8b41-296d-4051-9498-e9688fda8238">
 
 
-##Reproduce, adelanta, retrocede tu musica.
+## Reproduce, adelanta, retrocede tu musica.
