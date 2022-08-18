@@ -24,15 +24,30 @@
 
                             <img [src]="item.img" height="40px" width="40px">
                             <div class="artwork-overlay list-lockup-content__artwork-overlay">
-                                <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+                                <!-- <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
                                     class="button-playLista cursor-cartas">
                                     <path
                                         d="M4.4 15.14l10.386-6.096c.842-.459.794-1.64 0-2.097L4.401.85c-.87-.53-2-.12-2 .82v12.625c0 .966 1.06 1.4 2 .844z"
                                         fill-rule="nonzero"></path>
-                                </svg>
+                                </svg> -->
+                                <div *ngIf="state==='playing' && ( item.id===artista.id)">
+                                    <ng-container ngIf="false" *ngTemplateOutlet="pauseIcon"></ng-container>
+                                </div>
+                                <div *ngIf="state==='paused' || ( item.id!==artista.id)">
+                                    
+                                    <ng-container ngIf="false" *ngTemplateOutlet="playicon"></ng-container>
+                                </div>
                             </div>
                         </div>
-                        <div class="cancion-titulo">{{item.cancion}}</div>
+                        <div class="cancion-titulo">
+                            <!-- {{item.id}}
+                            {{artista.id |json}} -->
+
+
+                            {{item.cancion}}
+
+
+                        </div>
                         <div class="playing-music" *ngIf="item?.id === artista?.id">
 
                             <svg class="playback-bars__svg" viewBox="0 0 11 11">
@@ -42,17 +57,21 @@
                                         <use href="#bar-ember222" fill="white"></use>
                                     </mask>
                                 </defs>
-                                <g >
-                                    <use [ngClass]="(state=='playing')?'playback-bars__bar--1':'playback-bars__bar'" class="playback-bars__bar"  href="#bar-ember222"></use>
+                                <g>
+                                    <use [ngClass]="(state=='playing')?'playback-bars__bar--1':'playback-bars__bar'"
+                                        class="playback-bars__bar" href="#bar-ember222"></use>
                                 </g>
                                 <g id="barra2" transform="translate(2.9668 0)">
-                                    <use [ngClass]="(state=='playing')?'playback-bars__bar--2':'playback-bars__bar'" class="playback-bars__bar" href="#bar-ember222"></use>
+                                    <use [ngClass]="(state=='playing')?'playback-bars__bar--2':'playback-bars__bar'"
+                                        class="playback-bars__bar" href="#bar-ember222"></use>
                                 </g>
                                 <g transform="translate(5.9333 0)">
-                                    <use [ngClass]="(state=='playing')?'playback-bars__bar--3':'playback-bars__bar'" class="playback-bars__bar" href="#bar-ember222"></use>
+                                    <use [ngClass]="(state=='playing')?'playback-bars__bar--3':'playback-bars__bar'"
+                                        class="playback-bars__bar" href="#bar-ember222"></use>
                                 </g>
                                 <g transform="translate(8.8999 0)">
-                                    <use [ngClass]="(state=='playing')?'playback-bars__bar--4':'playback-bars__bar'" class="playback-bars__bar" href="#bar-ember222"></use>
+                                    <use [ngClass]="(state=='playing')?'playback-bars__bar--4':'playback-bars__bar'"
+                                        class="playback-bars__bar" href="#bar-ember222"></use>
                                 </g>
                             </svg>
                         </div>
@@ -83,3 +102,29 @@
     </div>
 
 </div>
+
+<ng-template #pauseIcon>
+
+    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+        clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" class="button-playLista cursor-cartas">
+        <path
+            d="M9.918.464h2.672a.89.89 0 01.89.89v13.291a.89.89 0 01-.89.891H9.918a.89.89 0 01-.89-.89V1.354a.89.89 0 01.89-.891zm-6.371 0h2.398c.567 0 1.027.46 1.027 1.028v13.016c0 .568-.46 1.028-1.027 1.028H3.547c-.567 0-1.028-.46-1.028-1.028V1.492c0-.568.46-1.028 1.028-1.028z"
+            fill-rule="nonzero"></path>
+    </svg>
+    <!-- <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+        class="dt-play-button__buffering">
+        <path
+            d="M8 16h-.006c-4.389 0-8-3.611-8-8 0-4.389 3.611-8 8-8 1.896 0 3.731.674 5.176 1.9a.693.693 0 01.312.577c0 .378-.312.69-.69.69a.693.693 0 01-.512-.227A6.632 6.632 0 008 1.373c-3.637 0-6.63 2.993-6.63 6.63 0 3.638 2.993 6.63 6.63 6.63s6.63-2.992 6.63-6.63V8a.695.695 0 01.685-.607c.347 0 .643.262.685.607 0 4.389-3.611 8-8 8">
+        </path>
+    </svg> -->
+
+
+</ng-template>
+<ng-template #playicon>
+    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+        class="button-playLista cursor-cartas">
+        <path
+            d="M4.4 15.14l10.386-6.096c.842-.459.794-1.64 0-2.097L4.401.85c-.87-.53-2-.12-2 .82v12.625c0 .966 1.06 1.4 2 .844z"
+            fill-rule="nonzero"></path>
+    </svg>
+</ng-template>

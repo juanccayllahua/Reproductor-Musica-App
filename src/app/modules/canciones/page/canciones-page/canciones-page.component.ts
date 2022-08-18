@@ -268,7 +268,7 @@ export class CancionesPageComponent implements OnInit {
     })
     if (this.deteneroadelantar === true) {
       this._multimediaServices.CancionInfo$.next(cancion)
-    }else{
+    } else {
       this._multimediaServices.pauseplay()
     }
 
