@@ -105,6 +105,9 @@
 .media-artwork-v2__image {
     display: flex;
     flex-direction: column;
+    filter: hue-rotate(21deg) saturate(384%) invert(3%);
+-webkit-filter: hue-rotate(21deg) saturate(384%) invert(3%);
+-moz-filter: hue-rotate(21deg) saturate(384%) invert(3%);
 }
 
 .lcd-descripcion {

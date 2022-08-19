@@ -195,6 +195,14 @@
     background-color: rgba(202, 200, 200, 0.555);
     width: 40px;
     height: 40px;
+    border-radius: 5px;
+}
+.imagen{
+    /* filter: grayscale(3%); */
+    filter: hue-rotate(21deg) saturate(384%) invert(3%);
+    -webkit-filter: hue-rotate(21deg) saturate(384%) invert(3%);
+    -moz-filter: hue-rotate(21deg) saturate(384%) invert(3%);
+    border-radius: 5px;
 }
 .contenedoricon{
 

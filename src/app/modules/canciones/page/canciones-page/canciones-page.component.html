@@ -23,7 +23,7 @@
 
                         <div class="cancion-titulo">
                             <div class="imgmusica" (click)="reproducir(item)">
-                                <img [src]="item.img" height="40px" width="40px">
+                                <img class="imagen" [src]="item.img" height="40px" width="40px">
                                 <div class="contenedoricon">
                                     <div class="icon">
                                         <div *ngIf="state==='playing' && ( item.id===artista.id)">

@@ -241,7 +241,16 @@ export class CancionesPageComponent implements OnInit {
         img: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/cantante-icon%2F4martinicon.jpg?alt=media&token=92072d9e-5f84-48af-8c68-039d2a119dc2',
         url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/electro%2FMartinGarrixMatisseSadkoTogether.mp3?alt=media&token=888ade76-8664-48dd-a04b-2f452861fbf3',
         router: ['/', 'song?id=19999117']
-      },
+      },{
+        id: 20,
+        cancion: 'Perfect',
+        artista: 'Ed Sheran ',
+        album: 'Romantic',
+        duracion: '03:20',
+        img: 'https://static.tomplay.com/wp-content/uploads/2020/11/Perfect-de-Ed-Sheeran.jpg',
+        url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/romantic%2FEdSheranPerfect.mp3?alt=media&token=8a887c0e-57c7-48f6-b556-eb67a8834ec7',
+        router: ['/', 'song?id=19999117']
+      }
 
     ]
 
