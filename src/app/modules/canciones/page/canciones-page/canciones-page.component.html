@@ -20,31 +20,25 @@
 
                 <div class="detalle-position">
                     <div class="card-song ">
-                        <div class="img-song cursor-cartas" (click)="reproducir(item)">
 
-                            <img [src]="item.img" height="40px" width="40px">
-                            <div class="artwork-overlay list-lockup-content__artwork-overlay">
-                                <!-- <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
-                                    class="button-playLista cursor-cartas">
-                                    <path
-                                        d="M4.4 15.14l10.386-6.096c.842-.459.794-1.64 0-2.097L4.401.85c-.87-.53-2-.12-2 .82v12.625c0 .966 1.06 1.4 2 .844z"
-                                        fill-rule="nonzero"></path>
-                                </svg> -->
-                                <div *ngIf="state==='playing' && ( item.id===artista.id)">
-                                    <ng-container ngIf="false" *ngTemplateOutlet="pauseIcon"></ng-container>
-                                </div>
-                                <div *ngIf="state==='paused' || ( item.id!==artista.id)">
-                                    
-                                    <ng-container ngIf="false" *ngTemplateOutlet="playicon"></ng-container>
+                        <div class="cancion-titulo">
+                            <div class="imgmusica" (click)="reproducir(item)">
+                                <img [src]="item.img" height="40px" width="40px">
+                                <div class="contenedoricon">
+                                    <div class="icon">
+                                        <div *ngIf="state==='playing' && ( item.id===artista.id)">
+                                            <ng-container ngIf="false" *ngTemplateOutlet="pauseIcon"></ng-container>
+                                        </div>
+                                        <div *ngIf="state==='paused' || ( item.id!==artista.id)">
+
+                                            <ng-container ngIf="false" *ngTemplateOutlet="playicon"></ng-container>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="cancion-titulo">
-                            <!-- {{item.id}}
-                            {{artista.id |json}} -->
-
-
-                            {{item.cancion}}
+                            <div class="titulo-text">
+                                {{item.cancion}}
+                            </div>
 
 
                         </div>
@@ -106,7 +100,7 @@
 <ng-template #pauseIcon>
 
     <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
-        clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" class="button-playLista cursor-cartas">
+        clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" class=" cursor-cartas">
         <path
             d="M9.918.464h2.672a.89.89 0 01.89.89v13.291a.89.89 0 01-.89.891H9.918a.89.89 0 01-.89-.89V1.354a.89.89 0 01.89-.891zm-6.371 0h2.398c.567 0 1.027.46 1.027 1.028v13.016c0 .568-.46 1.028-1.027 1.028H3.547c-.567 0-1.028-.46-1.028-1.028V1.492c0-.568.46-1.028 1.028-1.028z"
             fill-rule="nonzero"></path>
@@ -121,8 +115,7 @@
 
 </ng-template>
 <ng-template #playicon>
-    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
-        class="button-playLista cursor-cartas">
+    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="cursor-cartas">
         <path
             d="M4.4 15.14l10.386-6.096c.842-.459.794-1.64 0-2.097L4.401.85c-.87-.53-2-.12-2 .82v12.625c0 .966 1.06 1.4 2 .844z"
             fill-rule="nonzero"></path>

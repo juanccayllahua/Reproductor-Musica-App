@@ -166,6 +166,11 @@
    top:0;
    bottom: 0;
    padding: 10px 10px 10px 10px; 
+   /* margin-top: auto;
+   margin-bottom: auto;
+   margin-left: auto;
+   margin-right: auto; */
+
    position: absolute;
    display: flex;
    fill: #FFF;
@@ -175,6 +180,52 @@
    /* justify-content: center;
    align-items: center;
    justify-items: center; */
+    
+}
+
+/*icono de music*/
+.cancion-titulo{
+    display: flex;
+}
+.titulo-text{
+    margin-inline-start: 10px;
+}
+.imgmusica{
+    position: relative;
+    background-color: rgba(202, 200, 200, 0.555);
+    width: 40px;
+    height: 40px;
+}
+.contenedoricon{
+
+    position: absolute;
+    /* background-color: rgba(228, 228, 228, 0.164); */
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.icon{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    visibility: hidden;
+}
+
+/* .contenedoricon:hover {
+    
+     background-color: rgba(228, 228, 228, 0.164); */
+    
+
+
+.contenedoricon:hover .icon{
+    fill: #fff;
+    visibility: visible;
     
 }
 
