@@ -250,11 +250,58 @@ export class CancionesPageComponent implements OnInit {
         img: 'https://static.tomplay.com/wp-content/uploads/2020/11/Perfect-de-Ed-Sheeran.jpg',
         url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/romantic%2FEdSheranPerfect.mp3?alt=media&token=8a887c0e-57c7-48f6-b556-eb67a8834ec7',
         router: ['/', 'song?id=19999117']
+      },{
+        id: 21,
+        cancion: 'Heridas de Amor',
+        artista: 'Corazon Serrano',
+        album: 'Cumbia',
+        duracion: '03:50',
+        img: 'https://i.ytimg.com/vi/4Xwun4OPWf0/maxresdefault.jpg',
+        url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/cumbia%2Fheridascorazoncerrano.mp3?alt=media&token=6e3c62eb-19a0-43b4-aead-55d465eca80a',
+        router: ['/', 'song?id=19999117']
+      }      ,{
+        id: 22,
+        cancion: 'Elsa',
+        artista: 'Bareto',
+        album: 'Selva',
+        duracion: '03:10',
+        img: 'https://i.ytimg.com/vi/SGpAcPPpFFk/maxresdefault.jpg',
+        url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/cumbia%2FBaretoElsa.mp3?alt=media&token=03ba62f3-bdf4-4efa-8f2b-3e7fc57ddf1b',
+        router: ['/', 'song?id=19999117']
+      }   ,{
+        id: 23,
+        cancion: 'Concierto',
+        artista: 'China Maria y Juan Pipa',
+        album: 'huayno',
+        duracion: '15:10',
+        img: 'https://i.ytimg.com/vi/cN2e-qoJTzg/maxresdefault.jpg',
+        url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/huayno%2FConciertoJuanpipachinamaria.mp3?alt=media&token=bbfb6dbb-af3c-49f3-a21e-52c099f55833',
+        router: ['/', 'song?id=19999117']
+      }
+      ,{
+        id: 24,
+        cancion: 'Concierto 2',
+        artista: 'China Maria y Juan Pipa',
+        album: 'huayno',
+        duracion: '15:10',
+        img: 'https://i.ytimg.com/vi/HldMP2YJrd0/maxresdefault.jpg',
+        url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/huayno%2FConciertoJuanpipachinamariatw.mp3?alt=media&token=9a909e60-b44c-430a-8da3-bdea87d249ee',
+        router: ['/', 'song?id=19999117']
+      }
+      ,{
+        id: 25,
+        cancion: 'Concierto 3',
+        artista: 'Juan Pipa',
+        album: 'huayno',
+        duracion: '15:10',
+        img: 'https://i.ytimg.com/vi/NmtvEyn-F_0/maxresdefault.jpg',
+        url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/huayno%2FJuanPipa.mp3?alt=media&token=028f02f8-3075-45bc-8796-1e4429f8fb35',
+        router: ['/', 'song?id=19999117']
       }
 
     ]
-
-
+    
+    
     this._musicaservices.getAllMusic$().subscribe((canciones: any) => {
       console.log('listando... servicio c#');
       this.canciones.song = canciones;

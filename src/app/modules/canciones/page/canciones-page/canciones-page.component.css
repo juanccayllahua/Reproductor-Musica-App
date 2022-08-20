@@ -265,17 +265,17 @@
 } */
 
 .playback-bars__bar--1{
-    animation: barra1 5s ease infinite;
+    animation: barra1 .4s ease infinite;
 }
 
 .playback-bars__bar--2{
-    animation: barra2 2s ease infinite;
+    animation: barra2 .5s ease infinite;
 }
 .playback-bars__bar--3{
-    animation: barra3 4s ease infinite;
+    animation: barra3 1s ease infinite;
 }
 .playback-bars__bar--4{
-    animation: barra4 1s ease infinite;
+    animation: barra4 .7s ease infinite;
 }
 
 @keyframes barra1 {
