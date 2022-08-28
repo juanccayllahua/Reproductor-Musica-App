@@ -1,40 +1,21 @@
 .logo {
-    margin-top: 20px;
-    margin-bottom: 38px;
-    padding-inline-start: 25px;
-    justify-content: start;
     display: flex;
+    color: var(--color-2);
+    flex-direction: column;
+    width: 100%;
     align-items: center;
-    color: #eeeeee;
-    font-size: 19px;
-    font-weight: bold;
+
 }
 
 .reproductor-icon {
     fill: #eeeeee;
-    /* margin-inline-end:8px */
+
 }
-
-.navegacion-container {
-
-    --web-navigation-width: 260px;
-    width: 260px;
-    background: rgb(255 255 255 / 9%);
-    height: 100vh;
-    position: fixed;
-    bottom: 0px;
-}
-
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     fill: var(--color-3);
     color: #FFF;
-    padding-inline-start: 25px;
-    padding-right: 40px;
-    /* background-color: blueviolet; */
+
 }
 
 li {
@@ -43,21 +24,96 @@ li {
     display: flex;
     height: 32px;
     line-height: 1.46667;
-    
     border-radius: 5px;
 
-    /* flex-direction: column; */
+
 
 }
-li:focus-within{
+
+li:focus-within {
     background: rgb(145, 141, 141);
 }
 
-.web-navigation__nav-icon {
-    margin-inline-end: 8px
-}
-.logo{
-    display: flex;
-    flex-direction: row;
-    font-size: 20px;
+@media (max-width: 1200px) {
+    .navegacion-container{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        background: #464e4eee;
+
+    }
+    .menu-vertical {
+        display: none;
+    }
+
+    button {
+        outline: none;
+        border: none;
+    }
+
+    .icon-menu {
+        display: block;
+        margin-left: 10px;
+    }
+
+    .btnmenu {
+        display: block;
+    }
+
+
+    button {
+        outline: none;
+        border: none;
+
+    }
+
+    .btnmenu {
+
+        outline: none;
+        background-color: Transparent;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 35px;
+
+        height: 5px;
+        background-color: #fa586a;
+        margin: 16px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .cls-perfil {
+        margin-top: 20px;
+        color: rgb(196, 92, 92);
+        margin-bottom: 10px;
+    }
+    .logo{
+        display: flex;
+        color: var(--color-2);
+        flex-direction: column;
+         
+        /* margin-left: auto; */
+        /* margin-right: auto; */
+    }
+
 }

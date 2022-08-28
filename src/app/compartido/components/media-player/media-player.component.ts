@@ -66,7 +66,7 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
   }
 
   cargarcanciones(): void {
-  
+
     this.canciones.song = [
       {
         id: 1,
@@ -255,7 +255,7 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
         img: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/cantante-icon%2F4martinicon.jpg?alt=media&token=92072d9e-5f84-48af-8c68-039d2a119dc2',
         url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/electro%2FMartinGarrix-ForbiddenVoices.mp3?alt=media&token=92b27fa1-a982-442a-bf40-d37aefa0b776',
         router: ['/', 'song?id=19999117']
-      }, 
+      },
       {
         id: 19,
         cancion: 'Electro',
@@ -265,7 +265,7 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
         img: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/cantante-icon%2F4martinicon.jpg?alt=media&token=92072d9e-5f84-48af-8c68-039d2a119dc2',
         url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/electro%2FMartinGarrixMatisseSadkoTogether.mp3?alt=media&token=888ade76-8664-48dd-a04b-2f452861fbf3',
         router: ['/', 'song?id=19999117']
-      },{
+      }, {
         id: 20,
         cancion: 'Perfect',
         artista: 'Ed Sheran ',
@@ -274,7 +274,7 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
         img: 'https://static.tomplay.com/wp-content/uploads/2020/11/Perfect-de-Ed-Sheeran.jpg',
         url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/romantic%2FEdSheranPerfect.mp3?alt=media&token=8a887c0e-57c7-48f6-b556-eb67a8834ec7',
         router: ['/', 'song?id=19999117']
-      },{
+      }, {
         id: 21,
         cancion: 'Heridas de Amor',
         artista: 'Corazon Serrano',
@@ -283,8 +283,36 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
         img: 'https://i.ytimg.com/vi/4Xwun4OPWf0/maxresdefault.jpg',
         url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/cumbia%2Fheridascorazoncerrano.mp3?alt=media&token=6e3c62eb-19a0-43b4-aead-55d465eca80a',
         router: ['/', 'song?id=19999117']
-      }      ,{
-        id: 22,
+      }, {
+        id: 22,//--------------------------------
+        cancion: 'En que brazos estaras',
+        artista: 'Corazon Serrano',
+        album: 'Cumbia',
+        duracion: '03:50',
+        img: 'https://i.ytimg.com/vi/4Xwun4OPWf0/maxresdefault.jpg',
+        url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/cumbia%2FEnquebrazosestarasCorazonSerrano.mp3?alt=media&token=e718b38c-e35e-4b24-8452-7ef22c41f8d7',
+        router: ['/', 'song?id=19999117']
+      }, {
+        id: 23,//---------------------------------------
+        cancion: 'Nos Critican',
+        artista: 'Corazon Serrano',
+        album: 'Cumbia',
+        duracion: '03:50',
+        img: 'https://i.ytimg.com/vi/4Xwun4OPWf0/maxresdefault.jpg',
+        url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/cumbia%2FNosCriticanCorazonSerrano.mp3?alt=media&token=b65b2511-1b4d-4f25-ab95-9e8daa7b1924',
+        router: ['/', 'song?id=19999117']
+      }, {
+        id: 24,//---------------------------------------------------
+        cancion: 'Vida ya no es vida',
+        artista: 'Corazon Serrano',
+        album: 'Cumbia',
+        duracion: '03:50',
+        img: 'https://i.ytimg.com/vi/4Xwun4OPWf0/maxresdefault.jpg',
+        url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/cumbia%2FVidaYanoesVidaCorazonSerrano.mp3?alt=media&token=a370a6db-bca2-4140-9f2f-9471fea2c9db',
+        router: ['/', 'song?id=19999117']
+      }
+      , {
+        id: 25,
         cancion: 'Elsa',
         artista: 'Bareto',
         album: 'Selva',
@@ -292,8 +320,8 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
         img: 'https://i.ytimg.com/vi/SGpAcPPpFFk/maxresdefault.jpg',
         url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/cumbia%2FBaretoElsa.mp3?alt=media&token=03ba62f3-bdf4-4efa-8f2b-3e7fc57ddf1b',
         router: ['/', 'song?id=19999117']
-      }   ,{
-        id: 23,
+      }, {
+        id: 26,
         cancion: 'Concierto',
         artista: 'China Maria y Juan Pipa',
         album: 'huayno',
@@ -302,8 +330,8 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
         url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/huayno%2FConciertoJuanpipachinamaria.mp3?alt=media&token=bbfb6dbb-af3c-49f3-a21e-52c099f55833',
         router: ['/', 'song?id=19999117']
       }
-      ,{
-        id: 24,
+      , {
+        id: 27,
         cancion: 'Concierto 2',
         artista: 'China Maria y Juan Pipa',
         album: 'huayno',
@@ -312,8 +340,8 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
         url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/huayno%2FConciertoJuanpipachinamariatw.mp3?alt=media&token=9a909e60-b44c-430a-8da3-bdea87d249ee',
         router: ['/', 'song?id=19999117']
       }
-      ,{
-        id: 25,
+      , {
+        id: 28,
         cancion: 'Concierto 3',
         artista: 'Juan Pipa',
         album: 'huayno',

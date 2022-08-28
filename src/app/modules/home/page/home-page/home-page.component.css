@@ -1,55 +1,84 @@
 .contenedorprincipal {
-    grid-template-columns: 260px minmax(0, 1fr);
-    
-    background-color: rgba(20, 20, 20, 0);
-    display: grid;
-    /* height: 100vh; */
-    width: 100%;
-    padding-top: 50px;
-    
+  grid-template-columns: 260px minmax(0, 1fr);
+  background-color: rgba(20, 20, 20, 0);
+  display: grid;
+  width: 100%;
+  /* padding-top: 50px; */
+
 }
 
 .segundacolumna {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    gap: 10px;
-    grid-auto-flow: column; 
-    
-    
-} 
- 
-
-.header-user{
-    
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 4px;
-    /* width: 100%; */
-    position: fixed;
-    top: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+  grid-auto-flow: column;
 }
 
-.container{
-    overflow-y: auto;
-    height: 100vh;
+
+.header-user {
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px;
+  /* margin-bottom: auto; */
+  /* position: fixed;   */
+  /* top: 0; */
 }
 
- /* width */
+.container {
+  overflow-y: auto;
+  /* height: 100vh; */
+}
+
+/* width */
 .container::-webkit-scrollbar {
-    width: 14px;
+  width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #4d4b4b;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(117, 117, 117);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (max-width: 1200px) {
+
+
+  .contenedorprincipal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    background-color: rgba(0, 0, 0, 0.829);
+    gap: 1em;
+
   }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #4d4b4b; 
+
+  .container {
+    background: #4d4b4b;
+    height: 150px;
   }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(117, 117, 117); 
+
+  .header-user {
+    /* margin-top: -100px; */
+    height: 88px;
+    bottom: 0px;
+    position: absolute;
+    color: white;
+    width: 100%;
+    background: rgba(0, 11, 114, 0.933);
+
   }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+  .reprod {
+    /* margin-top: -100px; */
   }
+
+}

@@ -12,6 +12,10 @@ export class SidebarComponent implements OnInit {
     defaultOptions: Array<any>, accessLink: Array<any>
   } = {defaultOptions:[],accessLink:[]}
  customOptions: Array<any> =[]
+ classActive: string = "inactive"
+  selectedOptions: string = ""
+ menuactivo: boolean = false;
+ 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -37,6 +41,22 @@ export class SidebarComponent implements OnInit {
       //   router:['/','cancion']
       // }
     ]
+
+  }
+
+  selectItem(opcion: string): void {
+    console.log('seleccionado ', opcion);
+    this.selectedOptions = opcion;
+    this.classActive = "activo"
+  }
+
+  public myFunction(event: any): void {
+
+    if (this.menuactivo) {
+      this.menuactivo = false;
+    }else{
+      this.menuactivo = true;
+    }
 
   }
 

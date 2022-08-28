@@ -259,8 +259,36 @@ export class CancionesPageComponent implements OnInit {
         img: 'https://i.ytimg.com/vi/4Xwun4OPWf0/maxresdefault.jpg',
         url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/cumbia%2Fheridascorazoncerrano.mp3?alt=media&token=6e3c62eb-19a0-43b4-aead-55d465eca80a',
         router: ['/', 'song?id=19999117']
-      }      ,{
-        id: 22,
+      },{
+        id: 22,//--------------------------------
+        cancion: 'En que brazos estaras',
+        artista: 'Corazon Serrano',
+        album: 'Cumbia',
+        duracion: '03:50',
+        img: 'https://i.ytimg.com/vi/4Xwun4OPWf0/maxresdefault.jpg',
+        url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/cumbia%2FEnquebrazosestarasCorazonSerrano.mp3?alt=media&token=e718b38c-e35e-4b24-8452-7ef22c41f8d7',
+        router: ['/', 'song?id=19999117']
+      },{
+        id: 23,//---------------------------------------
+        cancion: 'Nos Critican',
+        artista: 'Corazon Serrano',
+        album: 'Cumbia',
+        duracion: '03:50',
+        img: 'https://i.ytimg.com/vi/4Xwun4OPWf0/maxresdefault.jpg',
+        url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/cumbia%2FNosCriticanCorazonSerrano.mp3?alt=media&token=b65b2511-1b4d-4f25-ab95-9e8daa7b1924',
+        router: ['/', 'song?id=19999117']
+      },{
+        id: 24,//---------------------------------------------------
+        cancion: 'Vida ya no es vida',
+        artista: 'Corazon Serrano',
+        album: 'Cumbia',
+        duracion: '03:50',
+        img: 'https://i.ytimg.com/vi/4Xwun4OPWf0/maxresdefault.jpg',
+        url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/cumbia%2FVidaYanoesVidaCorazonSerrano.mp3?alt=media&token=a370a6db-bca2-4140-9f2f-9471fea2c9db',
+        router: ['/', 'song?id=19999117']
+      }
+      ,{
+        id: 25,
         cancion: 'Elsa',
         artista: 'Bareto',
         album: 'Selva',
@@ -269,7 +297,7 @@ export class CancionesPageComponent implements OnInit {
         url: 'https://firebasestorage.googleapis.com/v0/b/munayapp-2227b.appspot.com/o/cumbia%2FBaretoElsa.mp3?alt=media&token=03ba62f3-bdf4-4efa-8f2b-3e7fc57ddf1b',
         router: ['/', 'song?id=19999117']
       }   ,{
-        id: 23,
+        id: 26,
         cancion: 'Concierto',
         artista: 'China Maria y Juan Pipa',
         album: 'huayno',
@@ -279,7 +307,7 @@ export class CancionesPageComponent implements OnInit {
         router: ['/', 'song?id=19999117']
       }
       ,{
-        id: 24,
+        id: 27,
         cancion: 'Concierto 2',
         artista: 'China Maria y Juan Pipa',
         album: 'huayno',
@@ -289,7 +317,7 @@ export class CancionesPageComponent implements OnInit {
         router: ['/', 'song?id=19999117']
       }
       ,{
-        id: 25,
+        id: 28,
         cancion: 'Concierto 3',
         artista: 'Juan Pipa',
         album: 'huayno',
